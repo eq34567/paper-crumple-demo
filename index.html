@@ -120,6 +120,28 @@
     #note-submit:active {
       transform: scale(0.97);
     }
+    /* 原作者署名（常驻左下角） */
+    #credit {
+      position: fixed;
+      left: 14px;
+      bottom: 12px;
+      z-index: 11;
+      font: 12px/1.6 "Microsoft YaHei", sans-serif;
+      color: rgba(255, 255, 255, 0.85);
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 8px;
+      padding: 5px 10px;
+      backdrop-filter: blur(3px);
+      user-select: none;
+    }
+    #credit a {
+      color: #ffd9a8;
+      text-decoration: none;
+      border-bottom: 1px dotted #ffd9a8;
+    }
+    #credit a:hover {
+      color: #fff;
+    }
   </style>
   <script type="importmap">
     {
@@ -143,6 +165,9 @@
     </div>
   </div>
   <button id="note-fab" title="写张纸条丢进去">✍</button>
+  <div id="credit">
+    原作 <a href="https://github.com/item-develop/paper-crumple-demo" target="_blank" rel="noopener">item-develop / paper-crumple-demo</a>（<a href="https://paper-crumple-demo.pages.dev/" target="_blank" rel="noopener">原版 demo</a>）· 本版二次开发加了肥皂泡玩法
+  </div>
   <script type="module" src="./src/main-vat.js"></script>
 </body>
 </html>

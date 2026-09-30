@@ -1,6 +1,15 @@
 # Paper Crumple — Houdini VAT × Three.js
 
-> **Fork / 二次开发说明**：本项目基于原作者 **item-develop** 的 [item-develop/paper-crumple-demo](https://github.com/item-develop/paper-crumple-demo) 二次开发（原在线 demo：<https://paper-crumple-demo.pages.dev/>，配套教程见 Codrops 文章 *Building an Interactive Crumpled Paper Effect with Houdini VAT and Three.js*）。
+## 🙏 原作者 / Original Author
+
+| | |
+|---|---|
+| **原作者** | **item-develop**（DE長澤） |
+| **原仓库** | <https://github.com/item-develop/paper-crumple-demo> |
+| **原版在线 demo** | <https://paper-crumple-demo.pages.dev/> |
+| **配套教程** | Codrops 文章 *Building an Interactive Crumpled Paper Effect with Houdini VAT and Three.js* |
+
+> 本仓库是上述作品的 **Fork / 二次开发**，所有纸团揉捏动画（Houdini VAT）、物理与交互框架的功劳属于原作者。
 >
 > **本分支在线试玩：<https://eq34567.github.io/paper-crumple-demo/>**
 >
