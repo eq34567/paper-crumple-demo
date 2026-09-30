@@ -11,6 +11,8 @@ An interactive demo of crumpled paper balls: click one to unfold it into a card,
 
 ## Running it
 
+**Windows：** 双击 `启动.bat` 即可（自动检测 python / node 并打开浏览器，关掉黑色窗口即停止）。
+
 No install and no build step — everything here is plain static files. Dependencies (three.js and cannon-es) are resolved from a CDN via the import map in `index.html`.
 
 Serve this folder with any static file server and open it in a browser:
