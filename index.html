@@ -23,6 +23,103 @@
       width: 100vw;
       height: 100vh;
     }
+    /* 写纸条的浮动按钮 */
+    #note-fab {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 54px;
+      height: 54px;
+      border: none;
+      border-radius: 50%;
+      background: #e07b39;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+      z-index: 11;
+      transition: transform 0.15s;
+    }
+    #note-fab:hover {
+      transform: scale(1.1);
+    }
+    /* 用户写纸条的输入面板（默认隐藏，点按钮弹出） */
+    #note-panel {
+      position: fixed;
+      right: 22px;
+      bottom: 88px;
+      width: min(380px, calc(100vw - 44px));
+      background: rgba(255, 255, 255, 0.94);
+      border-radius: 14px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+      padding: 12px 14px;
+      box-sizing: border-box;
+      z-index: 10;
+      backdrop-filter: blur(4px);
+    }
+    #note-panel.hidden {
+      display: none;
+    }
+    #note-text {
+      width: 100%;
+      height: 64px;
+      resize: none;
+      border: 2px dashed #b9b4a5;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font: 15px/1.5 "Caveat", "Yomogi", "Microsoft YaHei", sans-serif;
+      color: #1d1d1b;
+      background: #faf7ee;
+      box-sizing: border-box;
+      outline: none;
+    }
+    #note-text:focus {
+      border-color: #e07b39;
+    }
+    #note-panel .row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    #img-pick {
+      font-size: 13px;
+      color: #6b675c;
+      background: #efe9da;
+      border-radius: 8px;
+      padding: 6px 10px;
+      cursor: pointer;
+      white-space: nowrap;
+      user-select: none;
+    }
+    #img-pick:hover {
+      background: #e4dcc7;
+    }
+    #img-name {
+      flex: 1;
+      font-size: 12px;
+      color: #9a958a;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    #note-submit {
+      border: none;
+      border-radius: 18px;
+      padding: 7px 18px;
+      font: bold 14px "Microsoft YaHei", sans-serif;
+      color: #fff;
+      background: #e07b39;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: transform 0.12s;
+    }
+    #note-submit:hover {
+      transform: scale(1.05);
+    }
+    #note-submit:active {
+      transform: scale(0.97);
+    }
   </style>
   <script type="importmap">
     {
@@ -37,6 +134,15 @@
 <body>
   <div id="app"></div>
   <div id="info">loading...</div>
+  <div id="note-panel" class="hidden">
+    <textarea id="note-text" placeholder="写点什么…（选了图片可以不写字）" maxlength="120"></textarea>
+    <div class="row">
+      <label id="img-pick">🖼 选图片<input type="file" id="note-image" accept="image/*" hidden></label>
+      <span id="img-name"></span>
+      <button id="note-submit" type="button">揉成纸团 ✉</button>
+    </div>
+  </div>
+  <button id="note-fab" title="写张纸条丢进去">✍</button>
   <script type="module" src="./src/main-vat.js"></script>
 </body>
 </html>

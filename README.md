@@ -1,5 +1,9 @@
 # Paper Crumple — Houdini VAT × Three.js
 
+> **Fork / 二次开发说明**：本项目基于原作者 **item-develop** 的 [item-develop/paper-crumple-demo](https://github.com/item-develop/paper-crumple-demo) 二次开发（原在线 demo：<https://paper-crumple-demo.pages.dev/>，配套教程见 Codrops 文章 *Building an Interactive Crumpled Paper Effect with Houdini VAT and Three.js*）。
+>
+> 本分支新增：**肥皂泡玩法**——右键纸团裹入气泡漂浮，右键托住气泡拖动 + 滚轮前后推拉，两泡相碰合并，戳破时膜面从一点破开、水珠飞溅、雾化消散，泡内纸团有惯性/碰撞/撞壁物理，全程 WebAudio 合成音效。气泡膜为纯 ShaderMaterial（菲涅尔 + 薄膜干涉彩虹），并修复了原版的边缘发黑问题。
+
 An interactive demo of crumpled paper balls: click one to unfold it into a card, drag to pick it up, flick to throw it. The crumpling animation is a Vellum simulation baked in Houdini as **VAT (Vertex Animation Textures)**, decoded and played back in Three.js, with cannon-es handling the physics.
 
 - **Live demo:** https://paper-crumple-demo.pages.dev/
